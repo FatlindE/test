@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+        form input, form textarea, form button{
+            padding: 20px;
+            margin-bottom: 20px;
+            outline: none;
+            border: none;
+            background-color: #ddd;
+        }
+        form button{
+            background-color: rgb(109, 108, 108);
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form class="contact_form" action="POST" data-netlify="true">
+        <input class="name" type="text" placeholder="Name" />
+        <input class="email" type="email" placeholder="Email" />
+        <textarea class="msg" cols="5" rows="5" placeholder="Your message.."></textarea>
+        <input type="file" name="myfile" placeholder="Upload file">
+        <div data-netlify-recaptcha="true"></div>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
